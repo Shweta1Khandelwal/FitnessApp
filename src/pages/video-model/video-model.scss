@@ -1,0 +1,20 @@
+page-video-model {
+    ion-content{
+        top: 2%;
+        margin-left: 15%;
+        margin-top: 25%;
+        margin-bottom: 0%;
+        height: 70%;
+        width: 70%;
+        border-radius: 7px;
+    }
+    video{
+        height:99.5%;
+        position: relative;
+    }
+    .icon{
+        position: absolute;
+       z-index: 2;
+       color: white
+    }
+}

@@ -1,0 +1,29 @@
+page-modal {
+    ion-content{
+        top: 2%;
+        margin-left: 15%;
+        margin-top: 25%;
+        margin-bottom: 0%;
+        height: 70%;
+        width: 70%;
+        border-radius: 7px;
+    }
+    img{
+        height:99.5%;
+        position: relative;
+    }
+    ion-content{
+        top: 2%;
+        margin-left: 15%;
+        margin-top: 25%;
+        margin-bottom: 0%;
+        height: 70%;
+        width: 70%;
+        border-radius: 7px;
+    }
+    .icon{
+        position: absolute;
+       z-index: 2;
+       color: white
+    }
+}

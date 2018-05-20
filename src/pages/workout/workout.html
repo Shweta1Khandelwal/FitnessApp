@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+
+      <h2 style="color: black"> WorkOut Plan</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="accordion-list">
+    <!-- First Level -->
+
+    <ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
+      <!-- Toggle Button -->
+      <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+        <ion-icon item-left name="arrow-forward" *ngIf="!item.open"></ion-icon>
+        <ion-icon item-left name="arrow-down" *ngIf="item.open"></ion-icon>
+        {{ item.name }}
+      </button>
+
+      <ion-list *ngIf="item.children && item.open" inset>
+        <!-- Second Level -->
+        <ion-list-header *ngFor="let child of item.children; let j = index" no-padding>
+          <!-- Toggle Button -->
+          <button ion-item (click)="toggleItem(i, j)" *ngIf="child.children" class="child" detail-none>
+            <ion-icon item-left name="add" *ngIf="!child.open"></ion-icon>
+            <ion-icon item-left name="close" *ngIf="child.open"></ion-icon>
+
+            {{ child.name }}
+          </button>
+
+          <!-- Direct Add Button as Fallback -->
+
+          <ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap inset>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  {{ child.Count}}
+                </ion-col>
+                <ion-col>
+                  {{ child.Name}}
+
+                </ion-col>
+                <ion-col>
+                  {{ child.Equipment}}
+
+                </ion-col>
+                <ion-col>
+                  {{ child.Set}}
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <!-- <h2 style="margin-left: 46px; font-weight: bold;font-size: 40" text-lowercase >{{ child.name}}</h2>
+              <img src ="{{ child.URL }}" >
+              <h2  style="margin-top: -25px;margin-left: 130px;font-weight: bold;font-size: 50" text-lowercase >{{ child.price }}</h2> -->
+
+          </ion-item>
+
+
+
+        </ion-list-header>
+      </ion-list>
+
+    </ion-list-header>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,41 @@
+page-workout {
+    .accordion-list {
+        // background: color($colors, light);
+        height: 100%;
+    }
+    .section {
+        background: #000;
+        color: #fff;
+        margin-bottom: 4px;
+    }
+    .section-active {
+        background:  #000;
+        color: #fff;
+    }
+ 
+    // .child {
+    //     background: #e8e7e6;
+       
+    //     margin-bottom: 4px;
+    // }
+    .child-item {
+        background: #f3f2f1;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        
+    }
+    h2 { 
+        position: absolute; 
+        color:#fff;
+        left: 0; 
+        width: 100%; 
+        font-family: 'Times New Roman';
+        font-size: 40;
+       
+     }
+    .label {
+        margin: 0px;
+    }
+    
+}

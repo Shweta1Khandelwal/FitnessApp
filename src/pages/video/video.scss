@@ -1,0 +1,14 @@
+page-video {
+    img{
+        height: 142.3px;
+      padding-top: 3px;
+      padding-left: 3px;
+      padding-right: 3px;
+      border-radius:5px
+    }
+    ion-content {
+        background-image: url('../assets/imgs/gym2.jpg');
+        background-size: cover;
+        background-position-x: 50%;
+      }
+}

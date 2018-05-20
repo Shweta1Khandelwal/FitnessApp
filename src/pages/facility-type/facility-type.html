@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar>
+    <ion-icon name="arrow-round-back" style="color: black" (click)="BackPage()"></ion-icon>
+  </ion-navbar>
+</ion-header>
+<ion-tabs [selectedIndex]="mySelectedIndex" name="Facility-Type" tabsHighlight="true" tabsPlacement="top" transparent>
+  <ion-tab [root]="tab1Root" tabTitle="Facility"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Workout"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Traniee"></ion-tab>
+</ion-tabs>
